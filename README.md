@@ -21,10 +21,19 @@ API will start at
 ## Run the Frontend (Angular)
 Open a new terminal
 Navigate to Web folder:
-cd BuildingEntryRegistration.Web
 
-Install dependencies: npm install
-start the Angular Project: ng serve --open
+		```bash
+		cd BuildingEntryRegistration.Web
+
+Install dependencies: 
+
+		```bash
+		npm install
+		
+start the Angular Project: 
+
+		```bash
+		ng serve --open
 
 Angular runs at:
 	•	http://localhost:4200
@@ -36,8 +45,42 @@ If having a CORS problem because of using another url
 
 ## Running Backend Tests
 
-cd Test
-dotnet Test
+
+		```bash
+		cd Test
+		dotnet Test
 
 
+----------------------------------------
 
+Architecture
+
+[Angular Frontend]
+        |
+        v
+[.NET Web API Controllers]
+        |
+        v
+[CheckInService (business rules)]
+        |
+        v
+[InMemoryStore (seeded data: entrances, teams, check-ins)]
+
+
+----------------------------------------
+
+
+Done:
+	•	Visitor flow
+	•	API endpoints
+	•	Angular UI
+	•	Tests
+
+Missing (intentionally):
+	•	Check-out
+	•	Admin
+	•	QR scanner
+	•	DB persistence
+
+	
+---------------------------------------
