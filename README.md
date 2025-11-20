@@ -1,5 +1,5 @@
 # Building Entry Registration
-## 📁 Project Structure
+## Project Structure
 BuildingEntryRegistration.Api/   → .NET Web API
 BuildingEntryRegistration.Web/   → Angular frontend
 Test/                            → Backend unit tests
