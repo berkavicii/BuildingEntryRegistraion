@@ -1,0 +1,169 @@
+/* Genel layout */
+.checkin-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+Başlık
+.checkin-container h2 {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
+.steps {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.steps span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f1f1f1;
+  color: #555;
+  opacity: 0.6;
+}
+
+.steps span.active {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+/* Refined, clean and simple styles */
+.checkin-container {
+  max-width: 480px;
+  margin: 36px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(20, 24, 36, 0.06);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #1f2937;
+}
+
+.checkin-container h2 {
+  margin: 0 0 14px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.steps {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.steps span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 500;
+}
+
+.steps span.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+input[readonly] {
+  background: #f9fafb;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #b91c1c;
+}
+
+.success {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 13px;
+}
+
+.buttons {
+  margin-top: 14px;
+}
+
+button {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+button.secondary {
+  background: transparent;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+@media (max-width: 480px) {
+  .checkin-container { margin: 16px; padding: 14px; }
+  .checkin-container h2 { font-size: 20px; }
+  button { width: 100%; display: block; margin-bottom: 8px; }
+}

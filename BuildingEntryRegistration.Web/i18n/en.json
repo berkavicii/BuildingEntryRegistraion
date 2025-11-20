@@ -1,0 +1,45 @@
+{
+  "CHECKIN": {
+    "TITLE": "Visitor Check-In",
+    "STEPS": {
+      "1": "1. Entrance",
+      "2": "2. Details",
+      "3": "3. Team & Policy",
+      "4": "4. Review"
+    },
+    "ENTRANCE_ID": "Entrance ID",
+    "NEXT": "Next",
+    "PERSONAL_DETAILS": "Personal Details",
+    "FULL_NAME": "Full Name",
+    "EMAIL": "Email",
+    "COMPANY": "Company",
+    "BACK": "Back",
+    "TEAM_POLICIES_TITLE": "Team & Policies",
+    "TEAM": "Team",
+    "SELECT_TEAM": "Select a team",
+    "ACCEPT_POLICIES": "I accept the rules & policies.",
+    "REVIEW_TITLE": "Review & Check-In",
+    "ENTRANCE_LABEL": "Entrance",
+    "NAME_LABEL": "Name",
+    "COMPANY_LABEL": "Company",
+    "TEAM_ID_LABEL": "Team Id",
+    "ACCEPTED_POLICIES_LABEL": "Accepted Policies",
+    "YES": "Yes",
+    "NO": "No",
+    "CHECKIN_SUCCESS": "Check-in successful!",
+    "ID_LABEL": "Id",
+    "TEAM_LABEL": "Team",
+    "TIME_UTC_LABEL": "Time (UTC)",
+    "SUBMITTING": "Submitting...",
+    "CHECK_IN": "Check In"
+    ,
+    "ENTRANCE_REQUIRED": "Entrance ID is required.",
+    "ENTRANCE_INVALID": "Entrance ID is not valid.",
+    "ENTRANCE_VALIDATE_ERROR": "Error while validating entrance.",
+    "FULLNAME_REQUIRED": "Full name is required.",
+    "EMAIL_REQUIRED": "Email is required.",
+    "TEAM_REQUIRED": "Team is required.",
+    "ACCEPT_POLICIES_REQUIRED": "You must accept the policies.",
+    "CREATE_CHECKIN_ERROR": "Error while creating check-in."
+  }
+}

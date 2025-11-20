@@ -1,0 +1,116 @@
+<div class="checkin-container">
+  <h2>{{ t.TITLE }}</h2>
+
+  <!-- Step gösterimi -->
+  <div class="steps">
+    <span [class.active]="currentStep === 1">{{ t.STEPS['1'] }}</span>
+    <span [class.active]="currentStep === 2">{{ t.STEPS['2'] }}</span>
+    <span [class.active]="currentStep === 3">{{ t.STEPS['3'] }}</span>
+    <span [class.active]="currentStep === 4">{{ t.STEPS['4'] }}</span>
+  </div>
+
+  <!-- STEP 1: Entrance ID -->
+  <div *ngIf="currentStep === 1">
+    <label>{{ t.ENTRANCE_ID }}</label>
+    <input
+      type="text"
+      name="entranceId"
+      [(ngModel)]="form.entranceId"
+      [readonly]="entranceReadonly" />
+
+    <div *ngIf="entranceError" class="error">
+      {{ entranceError }}
+    </div>
+
+    <button (click)="onValidateEntrance()">{{ t.NEXT }}</button>
+  </div>
+
+  <!-- STEP 2: Personal Details -->
+  <div *ngIf="currentStep === 2">
+    <h3>{{ t.PERSONAL_DETAILS }}</h3>
+
+    <label>{{ t.FULL_NAME }}</label>
+    <input
+      type="text"
+      name="fullName"
+      [(ngModel)]="form.fullName" />
+
+    <br />
+
+    <label>{{ t.EMAIL }}</label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="form.email" />
+
+    <br />
+
+    <label>{{ t.COMPANY }}</label>
+    <input
+      type="text"
+      name="companyName"
+      [(ngModel)]="form.companyName" />
+
+    <br />
+
+    <button (click)="currentStep = 1">{{ t.BACK }}</button>
+    <button (click)="goFromDetailsToTeam()">{{ t.NEXT }}</button>
+  </div>
+
+  <!-- STEP 3: Team + Policy -->
+  <div *ngIf="currentStep === 3">
+    <h3>{{ t.TEAM_POLICIES_TITLE }}</h3>
+
+    <label>{{ t.TEAM }}</label>
+    <select [(ngModel)]="form.teamId" name="teamId">
+      <option [ngValue]="null">{{ t.SELECT_TEAM }}</option>
+      <option *ngFor="let t of teams" [ngValue]="t.id">
+        {{ t.name }}
+      </option>
+    </select>
+
+    <br /><br />
+
+    <label>
+      <input
+        type="checkbox"
+        [(ngModel)]="form.acceptedPolicies"
+        name="acceptedPolicies" />
+      {{ t.ACCEPT_POLICIES }}
+    </label>
+
+    <br />
+
+    <button (click)="currentStep = 2">{{ t.BACK }}</button>
+    <button (click)="goFromTeamToSummary()">{{ t.NEXT }}</button>
+  </div>
+
+  <div *ngIf="currentStep === 4">
+    <h3>{{ t.REVIEW_TITLE }}</h3>
+
+    <p><strong>{{ t.ENTRANCE_LABEL }}:</strong> {{ form.entranceId }}</p>
+    <p><strong>{{ t.NAME_LABEL }}:</strong> {{ form.fullName }}</p>
+    <p><strong>{{ t.EMAIL }}:</strong> {{ form.email }}</p>
+    <p><strong>{{ t.COMPANY_LABEL }}:</strong> {{ form.companyName }}</p>
+    <p><strong>{{ t.TEAM_ID_LABEL }}:</strong> {{ form.teamId }}</p>
+    <p><strong>{{ t.ACCEPTED_POLICIES_LABEL }}:</strong> {{ form.acceptedPolicies ? t.YES : t.NO }}</p>
+
+    <div *ngIf="submitError" class="error">
+      {{ submitError }}
+    </div>
+
+    <div *ngIf="checkInResult" class="success">
+      <h4>{{ t.CHECKIN_SUCCESS }}</h4>
+      <p><strong>{{ t.ID_LABEL }}:</strong> {{ checkInResult.id }}</p>
+      <p><strong>{{ t.TEAM_LABEL }}:</strong> {{ checkInResult.teamName }}</p>
+      <p><strong>{{ t.TIME_UTC_LABEL }}:</strong> {{ checkInResult.checkInDate }}</p>
+    </div>
+
+    <button (click)="currentStep = 3" [disabled]="submitting">{{ t.BACK }}</button>
+    <button
+      (click)="submitCheckIn()"
+      [disabled]="submitting || checkInResult">
+      {{ submitting ? t.SUBMITTING : t.CHECK_IN }}
+    </button>
+  </div>
+</div>
